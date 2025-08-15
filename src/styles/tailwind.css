@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --color-primary: #D4AF37; /* luxury gold */
+    --color-primary-foreground: #FFFFFF; /* white */
+    
+    /* Secondary Colors */
+    --color-secondary: #F5F5F0; /* warm neutral */
+    --color-secondary-foreground: #2C2C2C; /* rich charcoal */
+    
+    /* Accent Colors */
+    --color-accent: #C9A96E; /* champagne highlights */
+    --color-accent-foreground: #2C2C2C; /* rich charcoal */
+    
+    /* Background Colors */
+    --color-background: #FFFFFF; /* pure white */
+    --color-foreground: #2C2C2C; /* rich charcoal */
+    
+    /* Surface Colors */
+    --color-card: #FAFAFA; /* gentle depth */
+    --color-card-foreground: #2C2C2C; /* rich charcoal */
+    --color-popover: #FFFFFF; /* pure white */
+    --color-popover-foreground: #2C2C2C; /* rich charcoal */
+    
+    /* Muted Colors */
+    --color-muted: #F5F5F0; /* warm neutral */
+    --color-muted-foreground: #6B6B6B; /* clear hierarchy */
+    
+    /* Border & Input */
+    --color-border: #C9A96E; /* champagne highlights */
+    --color-input: #FFFFFF; /* pure white */
+    --color-ring: #D4AF37; /* luxury gold */
+    
+    /* Status Colors */
+    --color-success: #4A7C59; /* refined green */
+    --color-success-foreground: #FFFFFF; /* white */
+    --color-warning: #B8860B; /* elegant amber */
+    --color-warning-foreground: #FFFFFF; /* white */
+    --color-error: #8B4513; /* warm brown */
+    --color-error-foreground: #FFFFFF; /* white */
+    --color-destructive: #8B4513; /* warm brown */
+    --color-destructive-foreground: #FFFFFF; /* white */
+    
+    /* Additional Brand Colors */
+    --color-rose-gold: #8B4513; /* rose gold accent */
+    --color-deep-gold: #B8860B; /* deep gold for CTAs */
+    --color-text-primary: #2C2C2C; /* rich charcoal */
+    --color-text-secondary: #6B6B6B; /* clear hierarchy */
+    --color-champagne: #F8F6F0; /* champagne white */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+  }
+  
+  .font-accent {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+@layer components {
+  .luxury-shadow {
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.1);
+  }
+  
+  .luxury-shadow-hover {
+    box-shadow: 0 8px 30px rgba(212, 175, 55, 0.15);
+  }
+  
+  .gold-gradient {
+    background: linear-gradient(135deg, #D4AF37 0%, #C9A96E 100%);
+  }
+  
+  .sparkle-animation {
+    animation: sparkle 2s ease-in-out infinite;
+  }
+  
+  .gentle-bounce {
+    animation: gentleBounce 2s ease-in-out infinite;
+  }
+  
+  .luxury-border {
+    border: 1px solid rgba(212, 175, 55, 0.2);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% { 
+    transform: scale(1); 
+    opacity: 1; 
+  }
+  50% { 
+    transform: scale(1.05); 
+    opacity: 0.8; 
+  }
+}
+
+@keyframes gentleBounce {
+  0%, 100% { 
+    transform: translateY(0); 
+  }
+  50% { 
+    transform: translateY(-2px); 
+  }
+}
