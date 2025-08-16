@@ -89,17 +89,17 @@ const HeroSection = () => {
                   </div>
 
                   {/* Title */}
-                  <h1 className="text-5xl lg:text-7xl font-playfair font-bold text-foreground mb-4 leading-tight">
+                  <h1 className="text-5xl lg:text-7xl font-playfair font-bold text-white mb-4 leading-tight">
                     {slide?.title}
                   </h1>
 
                   {/* Subtitle */}
-                  <h2 className="text-xl lg:text-2xl font-cormorant text-muted-foreground mb-6">
+                  <h2 className="text-xl lg:text-2xl font-cormorant text-white mb-6">
                     {slide?.subtitle}
                   </h2>
 
                   {/* Description */}
-                  <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-xl">
+                  <p className="text-lg text-white mb-8 leading-relaxed max-w-xl">
                     {slide?.description}
                   </p>
 
@@ -121,7 +121,7 @@ const HeroSection = () => {
                         size="lg"
                         iconName="Camera"
                         iconPosition="left"
-                        className="border-primary/30 hover:bg-primary/5"
+                        className="border-primary/30 hover:bg-primary/5 text-white hover:text-primary transition-all duration-300"
                       >
                         Virtual Try-On
                       </Button>
@@ -132,15 +132,15 @@ const HeroSection = () => {
                   <div className="flex items-center space-x-6 mt-8 pt-8 border-t border-border/30">
                     <div className="flex items-center space-x-2">
                       <Icon name="Shield" size={20} className="text-primary" />
-                      <span className="text-sm text-muted-foreground">Certified Authentic</span>
+                      <span className="text-sm text-white">Certified Authentic</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <Icon name="Truck" size={20} className="text-primary" />
-                      <span className="text-sm text-muted-foreground">Free Shipping</span>
+                      <span className="text-sm text-white">Free Shipping</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <Icon name="RotateCcw" size={20} className="text-primary" />
-                      <span className="text-sm text-muted-foreground">30-Day Returns</span>
+                      <span className="text-sm text-white">30-Day Returns</span>
                     </div>
                   </div>
                 </div>
@@ -156,7 +156,7 @@ const HeroSection = () => {
             onClick={prevSlide}
             className="w-12 h-12 bg-background/80 backdrop-blur-sm border border-border rounded-full flex items-center justify-center hover:bg-primary/10 hover:border-primary/30 transition-all duration-300"
           >
-            <Icon name="ChevronLeft" size={20} className="text-foreground" />
+            <Icon name="ChevronLeft" size={20} className="text-white" />
           </button>
 
           {/* Slide Indicators */}
@@ -177,13 +177,13 @@ const HeroSection = () => {
             onClick={nextSlide}
             className="w-12 h-12 bg-background/80 backdrop-blur-sm border border-border rounded-full flex items-center justify-center hover:bg-primary/10 hover:border-primary/30 transition-all duration-300"
           >
-            <Icon name="ChevronRight" size={20} className="text-foreground" />
+            <Icon name="ChevronRight" size={20} className="text-white" />
           </button>
         </div>
       </div>
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 right-8 z-30">
-        <div className="flex flex-col items-center space-y-2 text-muted-foreground">
+        <div className="flex flex-col items-center space-y-2 text-muted-white">
           <span className="text-sm font-medium transform rotate-90 origin-center">Scroll</span>
           <div className="w-px h-12 bg-gradient-to-b from-primary to-transparent gentle-bounce"></div>
         </div>
